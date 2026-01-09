@@ -1,0 +1,106 @@
+{
+  "global": [
+    {
+      "name": "ENVIRONMENT",
+      "default": "prod",
+      "required": true,
+      "allowed": ["local", "dev", "stage", "prod"]
+    }
+  ],
+  "logger": [
+    {
+      "name": "LOGGING_ENABLED",
+      "default": 1,
+      "required": true,
+      "type": "int"
+    },
+    {
+      "name": "LOGGING_ENABLE_CONSOLE_LOGS",
+      "default": 1,
+      "required": true,
+      "type": "int"
+    },
+    {
+      "name": "LOG_DEBUG_LEVEL",
+      "default": "debug",
+      "required": false
+    },
+    {
+      "name": "LOG_LOCAL_ROOT",
+      "default": "./logs",
+      "required": false
+    },
+    {
+      "name": "LOG_LOCAL_CRITICAL_ROOT",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "LOG_FALLBACK_ROOT",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "LOG_SLACK_TIMEOUT_MS",
+      "default": 5000,
+      "required": true,
+      "type": "int"
+    },
+    {
+      "name": "LOG_EFS_ROOT",
+      "default": "/mnt/efs/logs",
+      "required": true
+    },
+    {
+      "name": "LOG_EFS_CRITICAL_ROOT",
+      "default": "/mnt/efs/logs/critical",
+      "required": true
+    },
+    {
+      "name": "LOG_ENCRYPTION_KEY",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "LOG_EFS_BATCH_SIZE",
+      "default": 100,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "name": "LOG_EFS_ENABLE_BUFFER",
+      "default": true,
+      "required": false
+    },
+    {
+      "name": "LOG_PRETTY_PRINT",
+      "default": false,
+      "required": false,
+      "type": "bool"
+    }
+  ],
+  "slack": [
+    {
+      "name": "SLACK_WEBHOOK_URL",
+      "default": "https://hooks.slack.com/services/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",
+      "required": true
+    },
+    {
+      "name": "SLACK_CRITICAL_WEBHOOK_URL",
+      "default": "https://hooks.slack.com/services/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",
+      "required": true
+    },
+    {
+      "name": "SLACK_WEBHOOKS_JSON_SECRET_NAME",
+      "default": "SlackWebhookJsonBundle",
+      "required": true
+    }
+  ],
+  "aws": [
+    {
+      "name": "AWS_REGION",
+      "default": "eu-north-1",
+      "required": true
+    }
+  ]
+}
